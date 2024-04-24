@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentGo: Каршеринг BMW в Астане</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .nav {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .container {
+            width: calc(100% - 20px); /* Расширяем контейнер, вычитаем только 20px общего отступа */
+            margin: 10px 10px; /* Отступы по бокам снижены до 10px */
+            padding: 20px 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        .container.black {
+            background-color: #000000;
+            color: #FFFFFF;
+            margin-bottom: 10px; /* Уменьшаем отступ снизу для черного контейнера */
+            padding-bottom: 60px; /* Уменьшаем внутренний отступ снизу для черного контейнера */
+        }
+        .container.brown {
+            background-color: #C49F8C;
+            color: #000000;
+        }
+        .container.white {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        h1 {
+            font-size: 3em; /* Уменьшено от 4em */
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 2.2em; /* Уменьшено от 3em */
+        }
+        h3 {
+            margin-top: 15px;
+            font-size: 1.8em; /* Уменьшено от 2.4em */
+        }
+        p, li {
+            font-size: 1.65em; /* Уменьшено от 2.2em */
+            line-height: 1.5;
+            text-align: left; /* Выравнивание текста влево */
+            margin-left: 0; /* Убираем отступ слева */
+            padding-left: 0; /* Убираем отступ слева */
+            list-style: none; /* Убираем маркеры списка */
+        }
+        .button {
+            background-color: #5771DB; /* Изменен с #FFFFFF на #5771DB */
+            color: #FFFFFF; /* Изменен с #000000 */
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #455a8c;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">Главная</a>
+        <a href="/openCarlist">Наши машины</a>
+    </div> 
+    <div class="container black">
+        <h1>RentGo: Каршеринг BMW в Астане</h1>
+        <p>Откройте для себя удобство и комфорт каршеринга BMW в Астане. Мгновенное бронирование, страховка и круглосуточная поддержка.</p>
+        <a href="/openBron" id="openBronBtn" class="button">Забронировать</a>
+        <a href="/openBase" id="openBaseBtn" class="button">Узнать о состояние машин</a>
+    </div>
+
+    <div class="container brown">
+        <h2>Классы автомобилей</h2>
+        <h3>Эконом</h3>
+        <p>Компактные и экономичные модели для поездок по городу.</p>
+        <ul>
+            <li>BMW 3 Series E36 (1990-1999)</li>
+            <li>BMW 5 Series E34 (1988-1996)</li>
+            <li>BMW 7 Series E32 (1986-1994)</li>
+        </ul>
+        <h3>Стандарт</h3>
+        <p>Просторные и комфортные автомобили для больших компаний.</p>
+        <ul>
+            <li>BMW 3 Series E90 (2010)</li>
+            <li>BMW 5 Series F10 (2010)</li>
+            <li>BMW X3 F25 (2010)</li>
+        </ul>
+        <h3>Бизнес</h3>
+        <p>Представительские модели BMW для деловых поездок.</p>
+        <ul>
+            <li>BMW 7 Series (2021)</li>
+            <li>BMW X5 G05 (2020)</li>
+            <li>BMW X7 G07 (2022)</li>
+        </ul>
+    </div>
+
+    <div class="container white">
+        <h2>Преимущества нашего сервиса</h2>
+        <ul>
+            <li>Мгновенное бронирование - Забронируйте авто за несколько кликов в мобильном приложении.</li>
+            <li>Круглосуточная поддержка - Наша служба поддержки готова помочь в любое время.</li>
+            <li>Страховка включена - Вы застрахованы на случай ДТП или повреждения автомобиля.</li>
+            <li>Гибкие тарифы - Оплачивайте только за время фактического использования.</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentGo: Модели BMW</title>
+    <style>
+        .nav {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+            .nav a {
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #C49F8C;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .car-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .car:hover {
+            transform: scale(1.25);
+            z-index: 2; /* Поднимает изображение над другими элементами */
+        }
+
+        .car {
+            width: 282px; /* Фиксированная ширина для предотвращения перекрытия */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            background-color: white;
+            text-align: center;
+        }
+
+            .car img {
+                width: 282px;
+                height: 150px;
+                display: block; /* Убирает лишние отступы под изображением */
+            }
+
+            .car .details {
+                position: absolute;
+                top: 0;
+                left: 110%;
+                transform: translateX(5px);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                text-align: left;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
+                font-size: 0.7em; /* Уменьшаем размер текста в 1.5 раза */
+            }
+
+            .car:hover .details {
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 0.3s, visibility 0s linear 0s, transform 0.3s;
+                left: 100%;
+                transform: translateX(-100%);
+            }
+
+            .car .details h3 {
+                margin-top: 0;
+                font-size: 1em;
+            }
+
+        .button {
+            background-color: #5771DB; /* Изменен с #FFFFFF на #5771DB */
+            color: #FFFFFF; /* Изменен с #000000 */
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .car .details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">Главная</a>
+        <a href="/openCarlist">Наши машины</a>
+    </div>
+    <h2>Модели BMW</h2>
+
+    <div class="car-container">
+        <!-- Эконом -->
+        <div class="car">
+            <img src="https://a.d-cd.net/863160as-960.jpg" alt="BMW 3 Series E36">
+            <div class="details">
+                <h3>BMW 3 Series E36</h3>
+                <p>Год выпуска: 1990-1999</p>
+                <p>Тип кузова: Седан</p>
+                <p>Двигатель: Бензиновый, 4 цилиндра</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/1989_BMW_525i_%28E34%29_sedan_%282015-11-13%29_01.jpg/800px-1989_BMW_525i_%28E34%29_sedan_%282015-11-13%29_01.jpg" alt="BMW 5 Series E34">
+            <div class="details">
+                <h3>BMW 5 Series E34</h3>
+                <p>Год выпуска: 1988-1996</p>
+                <p>Тип кузова: Седан</p>
+                <p>Двигатель: Бензиновый, 6 цилиндров</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://motor.ru/thumb/1280x720/filters:quality(75)/imgs/2020/06/14/08/3955394/e62b6f47be2c5c460cfbebd7fcf68c44358f50ea.jpg" alt="BMW 7 Series E32">
+            <div class="details">
+                <h3>BMW 7 Series E32</h3>
+                <p>Год выпуска: 1986-1994</p>
+                <p>Тип кузова: Седан</p>
+                <p>Двигатель: Бензиновый, 8 цилиндров</p>
+            </div>
+        </div>
+
+        <!-- Стандарт -->
+        <div class="car">
+            <img src="https://a.d-cd.net/33b160as-960.jpg" alt="BMW 3 Series E90">
+            <div class="details">
+                <h3>BMW 3 Series E90</h3>
+                <p>Год выпуска: 2010</p>
+                <p>Тип кузова: Седан</p>
+                <p>Двигатель: Бензиновый, 4 цилиндра</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://a.d-cd.net/52a6e0as-960.jpg" alt="BMW 5 Series F10">
+            <div class="details">
+                <h3>BMW 5 Series F10</h3>
+                <p>Год выпуска: 2010</p>
+                <p>Тип кузова: Седан</p>
+                <p>Двигатель: Бензиновый, 4 цилиндра</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://assets.avtocod.ru/storage/images/articles/odnorazovye%20detali-peregrevy-i-drugie-nepriyatnye-syurprizy-bmw-x3-ii-pokoleniya-f25-6-min.jpg" alt="BMW X3 F25">
+            <div class="details">
+                <h3>BMW X3 F25</h3>
+                <p>Год выпуска: 2010</p>
+                <p>Тип кузова: Кроссовер</p>
+                <p>Двигатель: Дизельный, 4 цилиндра</p>
+            </div>
+        </div>
+
+        <!-- Бизнес -->
+        <div class="car">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/2023-bmw-760i-xdrive-101-1650340309.jpg?crop=0.793xw:0.892xh;0.153xw,0.108xh&resize=768:*" alt="BMW 7 Series">
+            <div class="details">
+                <h3>BMW 7 Series</h3>
+                <p>Год выпуска: 2021</p>
+                <p>Тип кузова: Седан</p>
+                <p>Двигатель: Бензиновый, 8 цилиндров</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://a.d-cd.net/eAAAAgBC7OA-960.jpg" alt="BMW X5 G05">
+            <div class="details">
+                <h3>BMW X5 G05</h3>
+                <p>Год выпуска: 2020</p>
+                <p>Тип кузова: Кроссовер</p>
+                <p>Двигатель: Дизельный, 6 цилиндров</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://a.d-cd.net/fYAAAgAw0uA-960.jpg" alt="BMW X7 G07">
+            <div class="details">
+                <h3>BMW X7 G07</h3>
+                <p>Год выпуска: 2022</p>
+                <p>Тип кузова: Кроссовер</p>
+                <p>Двигатель: Бензиновый, 6 цилиндров</p>
+            </div>
+        </div>
+    </div>
+    <a href="/openBron" id="openBronBtn" class="button">Забронировать</a>
+
+    <div style="background-color: black; padding: 40px; border-radius: 20px; margin: 20px;">
+        <p style="font-family: 'Montserrat', sans-serif; color: white; font-weight: bold; text-align: center;">Почему выбирают нас для аренды BMW? RentGo – это не просто компания, предоставляющая услуги по аренде автомобилей. Мы – команда профессионалов, сосредоточенных на вашем комфорте и безопасности. Наша специализация в области BMW делает нас лучшим выбором в Астане. Мы стремимся обеспечить вас наилучшими условиями и самыми современными моделями этой легендарной марки. Присоединяйтесь к RentGo уже сегодня и ощутите удовольствие от вождения вместе с нами!</p>
+    </div>
+
+</body>
+</html>
